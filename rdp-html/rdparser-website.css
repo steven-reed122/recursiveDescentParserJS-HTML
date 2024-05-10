@@ -1,0 +1,110 @@
+.execute-button {
+background-color: rgb(253, 82, 0);
+color: white;
+border-color: rgb(253, 82, 0);
+border-style: solid;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 16px;
+padding-right: 16px;
+border-radius: 3px;
+cursor: pointer;
+margin-top: 0px;
+margin-bottom: 10px;
+margin-right: 10px;
+margin-left: 20px;
+transition: opacity 0.15s;
+vertical-align: top;
+}
+
+.execute-button:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+.execute-button:active {
+  opacity: 0.9;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 25px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
+}
+.input-label {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  margin-left: 5px;
+  display: block;
+}
+.input-box,
+.output-box {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  margin-left: 5px;
+  width: 450px;
+  height: 200px;
+  resize: none;
+}
+
+.parser-output-box{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  margin-left: 5px;
+  width: 450px;
+  height: 488px;
+  resize: none;
+}
+
+.output-box-label{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  margin-left: 5px;
+  display: block;
+}
+
+.tokenizer-output-box {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  margin-left: 5px;
+  padding: 10px;
+  border-radius: 3px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.input_execute_output {
+  display: grid;
+  grid-template-columns: repeat(5, auto); 
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 10px;
+}
+
+.input-and-execute-button {
+  grid-column: 1 / 2; 
+  grid-row: 1 / 2;
+}
+
+.tokenizer-output-label-and-box {
+  grid-column: 1 / 2; 
+  grid-row: 2 / 3; 
+}
+
+.parser-output-label-and-box {
+  grid-column: 4 / 5; 
+  grid-row: 1 / 6;
+}
+
+.java-code-label-and-box {
+  grid-column: 2 / 4;
+  grid-row: 1 / span 2; 
+}
+
+.error-label-and-box {
+  grid-column: 2 / 4; 
+  grid-row: 2 / 3; 
+}

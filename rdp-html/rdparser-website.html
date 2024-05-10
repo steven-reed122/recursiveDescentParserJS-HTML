@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="rdparser-website.css">
+    <script src="rdparser-website.js"></script>
+  </head>
+  <body>
+    <div class = "input_execute_output">
+      <div class="input-and-execute-button">
+        <label for="input" class="input-label">
+          Input:
+        </label>
+        <textarea type="text"id="input-box"class="input-box"input="input"></textarea>
+        <button class="execute-button" onclick="printInformation()">
+          Execute &#9658;
+        </button>
+      </div>
+      <div class = tokenizer-output-label-and-box>
+        <label for="tokenizer-output-box" class="output-box-label">
+          Tokenizer-Output:
+        </label>
+        <textarea id="tokenizer-output-box" class="output-box" readonly></textarea>
+      </div>
+      <div class = parser-output-label-and-box>
+        <label for="parser-output-box" class="output-box-label">
+          Parser-Output:
+        </label>
+        <textarea id="parser-output-box" class="parser-output-box" readonly>
+        </textarea>
+      </div>
+      <div class = java-code-label-and-box>
+        <label for="java-code-output-box" class="output-box-label">
+          Java-code-Output:
+        </label>
+        <textarea id="java-code-output-box" class="output-box" readonly>
+        </textarea>
+      </div>
+      <div class = error-label-and-box>
+        <label for="error-output-box" class="output-box-label">
+          Errors:
+        </label>
+        <textarea id="error-output-box" class="output-box" readonly></textarea>
+      </div>
+    </div>
+  </body>
+</html>

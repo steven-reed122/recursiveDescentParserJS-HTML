@@ -1,0 +1,36 @@
+This is the list of grammars for the programming language 
+I have implemented in the rdparser-website.js file.
+
+<> any operator between these marks is a "token"
+() means take exactly one of the inside tokens
+"(" or ")" means parenthesis literal a.k.a the actual code must have the corresponding parenthesis at the designated spot
+= is the literal assignment operator
+{} means take zero or any number of the inside token(s)
+|  means the logical "or" operator
+-> means the preceding token is composed of the following tokens
+... means logically fill in list with the undefined characters
+
+These grammars do not include '\n' characters but it assumed 
+that the programmer would use '\n' characters at the appropriate places.
+
+Variable names should consist of only alphanumeric characters and nothing else.
+
+<program> -> program <statements> end_program
+<statements> -> <statement><statements> | <statement>
+<statement> -> <assignment> | <conditional> | <loop> 
+<conditional> -> if <logical_expression> <conditional_statements> end_if 
+<logical_expression> -> "(" <var> (==|>|<|>=|<=) <var> ")"
+<conditional_statements> -> { <statement> }
+<loop> -> <loop_condition> <loop_statements>
+<loop_condition> -> "(" <loop_assignment> : <expr> ")"
+<loop_assignment> -> <ident> = <expr>
+<loop_statements> -> { <statement> }
+<assignment> -> <ident> = <expr> ;
+<expr> -> <term> { (+|-) <term> }
+<term> -> <factor> { ( * | / ) <factor> }
+<factor> ->  <var> | (<expr>)
+<var> -> <ident> | <int_const>
+<ident> -> <letter> { <letter> | <digit>}
+<int_const> -> <digit> { <digit> }
+<letter> -> a|b|c|…|x|y|z|A|B|C|…|X|Y|Z
+<digit> ->  0|1|2|…|7|8|9

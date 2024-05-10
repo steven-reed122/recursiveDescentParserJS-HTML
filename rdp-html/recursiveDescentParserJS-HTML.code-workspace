@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../recursiveDescentParserJS-HTML"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "rdp-html"
+	}
+}
