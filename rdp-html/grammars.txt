@@ -10,6 +10,7 @@ I have implemented in the rdparser-website.js file.
 -> means the preceding token is composed of the following tokens
 ... means logically fill in list with the undefined characters
 
+All other symbols and keywords not inside of <> are literal.
 These grammars do not include '\n' characters but it assumed 
 that the programmer would use '\n' characters at the appropriate places.
 
